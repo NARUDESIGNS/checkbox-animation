@@ -1,4 +1,17 @@
 
+
+/*---------- animation begins here ----------*/
+.blinks {
+    animation: blinks 1.5s infinite ;
+    -webkit-animation: blinks 1.5s infinite ;
+}
+@keyframes blinks {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+/*---------- animation ends here ----------*/
+
+
 body {
     background-color: rgb(236, 236, 236);
 }
@@ -24,6 +37,14 @@ body {
     font-size: 12px;
 }
 
+.check-btn {
+    border: 1px solid yellow;
+    width: 130px;
+    height: auto;
+    margin: 70px auto;
+    margin-bottom: 15px;
+}
+
 .container input[type="checkbox"] {
     width: 120px;
     height: 50px;
@@ -45,7 +66,6 @@ body {
     box-shadow: inset 0 0 1px 1px rgba(0, 0, 0, 0.2);
     position: relative;
     -webkit-tap-highlight-color: transparent;
-    margin: 70px 35%;
 }
 
 .container input[type="checkbox"]::before {
@@ -84,6 +104,108 @@ body {
     background: linear-gradient(40deg, rgb(82, 82, 82) 5%, rgb(255, 250, 206));
     box-shadow: -5px 1px 10px rgba(236, 234, 199, .2);
 }
+
+.night {
+    /* background-color: rgb(61, 61, 61); */
+    height: 40px;
+    width: 80px;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    top: -46.6px;
+    left: -18px;
+}
+
+.hills, .hills2 {
+    border: 20px solid rgb(148, 145, 134);
+    border-top: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 15px;
+    bottom: 1px;
+}
+.hills2 {
+    border-width: 14px;
+    border-color:  rgb(197, 193, 180);
+    border-top: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    left: 35px;
+}
+
+.stars {
+    height: 2px;
+    width: 2px;
+    background-color: white;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    position: absolute;
+}
+.stars:nth-child(1) {
+    left: 15px;
+    top: 10px;
+    animation-delay: 1s;
+}
+.stars:nth-child(2) {
+    left: 25px;
+    top: 5px;
+    animation-delay: 1.3s;
+}
+.stars:nth-child(3) {
+    left: 30px;
+    top: 13px;
+    animation-delay: 1.5s;
+}
+.stars:nth-child(4) {
+    left: 35px;
+    top: 4px;
+    animation-delay: 0.3s;
+}
+.stars:nth-child(5) {
+    left: 40px;
+    top: 9px;
+    animation-delay: 0.7s;
+}
+.stars:nth-child(6) {
+    left: 45px;
+    top: 21px;
+    animation-delay: 1.8s;
+}
+.stars:nth-child(7) {
+    left: 50px;
+    top: 12px;
+    animation-delay: 2s;
+}
+.stars:nth-child(8) {
+    left: 10px;
+    top: 25px;
+    animation-delay: 1.2s;
+}
+.stars:nth-child(9) {
+    left: 5px;
+    top: 15px;
+    animation-delay: 2.1s;
+}
+.stars:nth-child(10) {
+    left: 20px;
+    top: 20px;
+    animation-delay: 2.3s;
+}
+
+
+
+
+
 
 /* .container input[type="checkbox"]::after{
     content: "";
