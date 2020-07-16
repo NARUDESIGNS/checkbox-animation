@@ -57,6 +57,11 @@
 
 body {
     background-color: rgb(236, 236, 236);
+    transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+    -ms-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
 }
 
 .container {
