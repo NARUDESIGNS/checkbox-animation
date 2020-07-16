@@ -9,6 +9,47 @@
     from {opacity: 0}
     to {opacity: 1}
 }
+
+.slide-LR {
+    animation: slide-LR 3s linear;
+    -webkit-animation: slide-LR 3s linear;
+    animation-iteration-count: infinite;
+    visibility: visible;
+}
+
+@keyframes slide-LR {
+    0% {left: 45px}
+    55% {left: 50px}
+    100% {left: 45px}
+}
+
+.slide-RL {
+    animation: slide-RL 1.8s ease;
+    -webkit-animation: slide-RL 1.8s ease;
+    animation-iteration-count: infinite;
+    visibility: visible;
+    animation-delay: 1s;
+}
+
+@keyframes slide-RL {
+    0% {right: 0}
+    55% {left: 40px}
+    100% {right: 0}
+}
+
+.slide-up-down {
+    animation: slide-up-down 4s linear;
+    -webkit-animation: slide-up-down 4s linear;
+    animation-iteration-count: infinite;
+    visibility: visible;
+    animation-delay: 1s;
+}
+
+@keyframes slide-up-down {
+    0% {top: 15px}
+    55% {top: 18px}
+    100% {top: 15px}
+}
 /*---------- animation ends here ----------*/
 
 
@@ -43,6 +84,7 @@ body {
     height: auto;
     margin: 70px auto;
     margin-bottom: 15px;
+    z-index: 5;
 }
 
 .container input[type="checkbox"] {
@@ -105,7 +147,7 @@ body {
     box-shadow: -5px 1px 10px rgba(236, 234, 199, .2);
 }
 
-.night {
+.night, .day {
     /* background-color: rgb(61, 61, 61); */
     height: 40px;
     width: 80px;
@@ -203,8 +245,90 @@ body {
 }
 
 
+/*---------------------- Day --------------------*/
 
+.day {
+    width: 80px;
+    height: auto;
+    padding: 1px;
+    /* border: 1px solid green;  */
+    position: relative;
+    top: -101px;
+    left: -30px;
+}
 
+.day .hills, .day .hills2 {
+    left: 70px;
+}
+.day .hills2 {
+    left: 60px;
+}
+
+.clouds {
+    height: 50px;
+    width: auto;
+    top: -40px;
+    padding: 1px;
+    /* border: 1px solid rgb(255, 93, 64); */
+}
+.cloud{
+    position: relative;
+    width: 23px;
+    height: 20px;
+    display: inline-block;
+    left: 45px;
+    top: 18px;
+    margin: 0 -6px;
+}
+.cloud div {
+    position: absolute;
+    background-color: rgb(216, 216, 216);
+    transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -ms-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+}
+.cloud div:nth-of-type(1) {
+    height: 10px;
+    width: 12px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    bottom: 5px;
+    left: 3px;
+    z-index: 1;
+}
+.cloud div:nth-of-type(2) {
+    height: 10px;
+    width: 20px;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    bottom: 0;
+    box-shadow: -1px 2px 0px rgba(255, 255, 255, 0.9);
+}
+
+.cloud:nth-of-type(1) {
+    transform: scale(0.7);
+    -webkit-transform: scale(0.7);
+    -moz-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    -o-transform: scale(0.7);
+}
+.cloud:nth-of-type(3) {
+    transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    -o-transform: scale(0.5);
+    margin-bottom: -1px;
+    left:42px;
+}
 
 
 /* .container input[type="checkbox"]::after{
