@@ -20,3 +20,11 @@ checkBtn.addEventListener("click", () => {
     }
 });
 
+function click(element){
+    element.addEventListener('click', () => {
+        inputCheckbox.click();
+    })
+}
+
+click(day);
+click(night);
